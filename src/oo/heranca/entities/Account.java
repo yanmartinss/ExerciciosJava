@@ -13,6 +13,14 @@ public class Account {
         this.holder = holder;
     }
 
+    public Double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Double balance) {
+        this.balance = balance;
+    }
+
     public Integer getNumber() {
         return number;
     }
@@ -29,7 +37,7 @@ public class Account {
         this.holder = holder;
     }
 
-    public void withdraw(double amount) {balance -= amount;}
+    public void withdraw(double amount) {balance -= amount + 5.0;}
 
     public void deposit(double amount) {balance += amount;}
 }
