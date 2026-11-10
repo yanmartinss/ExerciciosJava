@@ -1,6 +1,7 @@
-package oo.herenca.entities;
+package oo.heranca.entities;
 
 public class SavingsAccount extends Account {
+
     private Double interestRate;
 
     public SavingsAccount() {

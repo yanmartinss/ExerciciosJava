@@ -1,4 +1,4 @@
-package oo.herenca.entities;
+package oo.heranca.entities;
 
 public class BusinessAccount extends Account {
     private Double loanLimit;
