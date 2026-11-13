@@ -1,0 +1,31 @@
+package oo.aulaabstrata.exercicio.entities;
+
+public class Individual extends TaxPayer{
+
+    private Double healthExpenditures;
+
+    public Individual() {
+        super();
+    }
+
+    public Individual(String name, Double anualIncome, Double healthExpenditures) {
+        super(name, anualIncome);
+        this.healthExpenditures = healthExpenditures;
+    }
+
+    public Double getHealthExpenditures() {
+        return healthExpenditures;
+    }
+
+    public void setHealthExpenditures(Double healthExpenditures) {
+        this.healthExpenditures = healthExpenditures;
+    }
+
+    @Override
+    public double tax() {
+        double rate = anualIncome < 20000 ? 0.15 : 0.25;
+        double basicTax = anualIncome * rate - healthExpenditures * 0.5;
+
+        return basicTax < 0 ? 0.0 : basicTax;
+    }
+}
