@@ -1,7 +1,5 @@
 package alura.desafio02.model.entities;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Compra implements Comparable<Compra>{
 
     private String descricaoCompra;
@@ -28,7 +26,7 @@ public class Compra implements Comparable<Compra>{
     }
 
     @Override
-    public int compareTo(@NotNull Compra outroCompra) {
+    public int compareTo(Compra outroCompra) {
         return Double.compare(this.valorCompra, outroCompra.valorCompra);
     }
 }

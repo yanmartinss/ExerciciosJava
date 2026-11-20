@@ -1,7 +1,5 @@
 package generics.problema.entities;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Product implements Comparable<Product> {
 
     private String name;
@@ -36,7 +34,7 @@ public class Product implements Comparable<Product> {
     }
 
     @Override
-    public int compareTo(@NotNull Product o) {
+    public int compareTo(Product o) {
         return price.compareTo(o.getPrice());
     }
 }
